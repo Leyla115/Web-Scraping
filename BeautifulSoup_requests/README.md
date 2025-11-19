@@ -1,31 +1,33 @@
-web_sraping1.py query:
+	web_scraping1.py
 
-This script scrapes historical FIFA World Cup match results directly from Wikipedia for all tournaments between 1930–2022.
+This script scrapes historical FIFA World Cup match results from Wikipedia for all tournaments between 1930–2022.
+
+How it works
 
 For each World Cup year, it:
 
-Sends a request to the Wikipedia page for that tournament
+Sends an HTTP request to that year’s Wikipedia page
 
-Parses the HTML using BeautifulSoup
+Parses the HTML content with BeautifulSoup
 
-Extracts every match box (footballbox), including:
+Extracts every match container (footballbox), including:
 
-  Home team
-  
-  Score
-  
-  Away team
+	Home team
+	
+	Score
+	
+	Away team
 
-Stores the results in a pandas DataFrame
+Stores the extracted data in a pandas DataFrame
 
-Appends a year column for each match
+Adds a year column to each record
 
-Finally:
+	Output
 
-All tournaments are combined into a single DataFrame
+All tournaments are combined into a single dataset and saved as:
+fifa_worldcup_historical_data.csv
 
-Saved to fifa_worldcup_historical_data.csv
+The 2022 tournament is scraped separately and saved as:
+fifa_worldcup_fixture.csv
 
-The 2022 tournament data is also saved separately as fifa_worldcup_fixture.csv
-
-A custom User-Agent header is included to avoid Wikipedia’s bot restrictions.
+	A custom User-Agent header is included to avoid Wikipedia bot-blocking.

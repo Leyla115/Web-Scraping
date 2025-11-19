@@ -10,11 +10,11 @@ Parses the HTML using BeautifulSoup
 
 Extracts every match box (footballbox), including:
 
-Home team
-
-Score
-
-Away team
+  Home team
+  
+  Score
+  
+  Away team
 
 Stores the results in a pandas DataFrame
 
